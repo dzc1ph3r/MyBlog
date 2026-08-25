@@ -1,7 +1,7 @@
 title: "مدوّنة"
 description: "مساحة للكتابة والتأمل والمعرفة"
-url: ""
-baseurl: ""
+url: "https://dzc1ph3r.github.io/"
+baseurl: "/MyBlog"
 lang: "ar"
 direction: "rtl"
 author:
