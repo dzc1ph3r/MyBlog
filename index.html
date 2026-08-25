@@ -1,0 +1,26 @@
+---
+layout: default
+title: "الرئيسية"
+---
+<section class="hero">
+  <div class="hero__eyebrow">مرحبًا بك</div>
+  <h1>أفكار تُكتب<br><em>لتبقى.</em></h1>
+  <p>مقالات وتأملات وحكايات صغيرة عن التقنية، الإنسان، الأدب وكل ما يستحق أن نتوقف عنده قليلًا.</p>
+  <a class="hero__link" href="#articles">استكشف المقالات <span>←</span></a>
+</section>
+<section class="section" id="articles">
+  <div class="section__head"><h2>آخر المقالات</h2><span>{{ site.posts | size }} مقال</span></div>
+  <div class="posts-grid">
+    {% for post in site.posts %}
+    <article class="post-card">
+      {% if post.image %}<a href="{{ post.url | relative_url }}" class="post-card__image"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}"></a>{% endif %}
+      <div class="post-card__body">
+        <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>{% if post.category %}<span>·</span><span>{{ post.category }}</span>{% endif %}</div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+        <a class="read-more" href="{{ post.url | relative_url }}">اقرأ المقال <span>←</span></a>
+      </div>
+    </article>
+    {% else %}<div class="empty">لا توجد مقالات بعد. ابدأ بكتابة أول مقال داخل <code>_posts/</code>.</div>{% endfor %}
+  </div>
+</section>

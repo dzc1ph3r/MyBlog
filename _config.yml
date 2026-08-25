@@ -1,14 +1,36 @@
-title: "مدونة الفكر الرقمي"
-description: "مساحة شخصية لكتابة المقالات التقنية والفلسفية"
-lang: ar
-direction: rtl
-permalink: /posts/:title/
-url: "https://dzc1ph3r.github.io"
-baseurl: "/MyBlog"
-
-markdown: kramdown
-theme: null
-
+title: "مدوّنة"
+description: "مساحة للكتابة والتأمل والمعرفة"
+url: ""
+baseurl: ""
+lang: "ar"
+direction: "rtl"
 author:
-  name: "الكاتب"
-  bio: "مجرد مفكر في الذات وهذه الحياة"
+  name: "اسم الكاتب"
+  bio: "كاتب ومهتم بالأفكار والتقنية والأدب."
+  avatar: "/assets/images/avatar.svg"
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: ar
+      dir: rtl
+  - scope:
+      path: ""
+    values:
+      lang: ar
+      dir: rtl
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
