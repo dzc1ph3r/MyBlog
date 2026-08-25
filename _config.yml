@@ -1,0 +1,12 @@
+title: "مدونة الفكر الرقمي"
+description: "مساحة شخصية لكتابة المقالات التقنية والفلسفية"
+lang: ar
+direction: rtl
+permalink: /posts/:title/
+
+markdown: kramdown
+theme: null
+
+author:
+  name: "الكاتب"
+  bio: "مجرد مفكر في الذات وهذه الحياة"
