@@ -3,6 +3,8 @@ description: "مساحة شخصية لكتابة المقالات التقنية
 lang: ar
 direction: rtl
 permalink: /posts/:title/
+url: "https://dzc1ph3r.github.io"
+baseurl: "/MyBlog"
 
 markdown: kramdown
 theme: null
